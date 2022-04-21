@@ -8,12 +8,106 @@
   <link rel="shortcut icon" href="/hunterhr-icon.png" type="image/x-icon">
   <link href="styles/normalize.css" rel="stylesheet">
   <link href="styles/hunterhr.css" rel="stylesheet">
+
+  <link href="https://unpkg.com/@glidejs/glide@3.5.2/dist/css/glide.core.css" rel="stylesheet">
+  <link href="https://unpkg.com/@glidejs/glide@3.5.2/dist/css/glide.theme.css" rel="stylesheet">
+  <script src="https://unpkg.com/@glidejs/glide"></script>
+
   <title>Hunter HR</title>
 </head>
 <body>
-  <header>
+  <video id="background-video" autoplay loop muted poster="images/video-poster.png">
+    <source src="https://video.wixstatic.com/video/11062b_95d34f15761e4114a57b17823228948e/720p/mp4/file.mp4" type="video/mp4">
+  </video>
 
+  <header>
+    <div class="nav-container">
+      <div>
+
+        <a href="/">
+          <img alt="Hunter HR Logo" src="images/Hunter-HR-logo-cropped.jpg" style="width:300px" />
+        </a>
+        <div>Your people are our business</div>
+      </div>
+
+      <nav class="top-menu">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#plans">Plans & Pricing</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <nav>
+      
+    </nav>
   </header>
-  <h1>Hello hunter hr!</h1>
+  <main>
+
+    <section id="about">
+      <h2>About</h2>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+    </section>
+
+    <section id="services">
+      <h2>Services</h2>
+    </section>
+
+    <section id="plans">
+      <h2>Plans & Pricing</h2>
+    </section>
+    
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+
+      <div id="testimonials" class="testimonials-carousel slider glide glide--ltr glide--carousel glide--swipeable">
+        <div class="slider__track glide__track" data-glide-el="track">
+          <ul class="glide__slides" >
+            <li class="slider__frame glide__slide glide__slide--clone" style="width: 182.75px; margin-left: 5px; margin-right: 5px;">Hello</li>
+            <li class="slider__frame glide__slide glide__slide--clone" style="width: 182.75px; margin-left: 5px; margin-right: 5px;">world</li>
+            <li class="slider__frame glide__slide glide__slide--clone" style="width: 182.75px; margin-left: 5px; margin-right: 5px;">hunter hr</li>
+          </ul>
+        </div>
+    
+        <div data-glide-el="controls">
+          <button class="slider__arrow slider__arrow--prev glide__arrow glide__arrow--prev" data-glide-dir="<">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+              <path d="M0 12l10.975 11 2.848-2.828-6.176-6.176H24v-3.992H7.646l6.176-6.176L10.975 1 0 12z"></path>
+            </svg>
+          </button>
+          <button class="slider__arrow slider__arrow--next glide__arrow glide__arrow--next" data-glide-dir=">">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+              <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="slider__bullets glide__bullets" data-glide-el="controls[nav]">    
+          <button class="slider__bullet glide__bullet glide__bullet--active" data-glide-dir="=0"></button>    
+          <button class="slider__bullet glide__bullet" data-glide-dir="=1"></button>    
+          <button class="slider__bullet glide__bullet" data-glide-dir="=2"></button>      
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+    </section>
+  </main>
+  <script>
+    // const glide = new Glide('.testimonials-carousel', {
+    //   type: 'carousel',
+    //   perView: 1,
+    //   focusAt: 'center',
+    // });
+
+    //glide.mount();
+  </script>
 </body>
 </html>

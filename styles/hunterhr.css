@@ -1,5 +1,52 @@
 html, body {
   height: 100%;
     font-family: open_sansregular, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* 
+video 
+https://blog.hubspot.com/website/video-background-css
+*/
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (max-width: 750px) {
+  #background-video { display: none; }
+  body {
+    background: url("../images/video-poster.png") no-repeat;
+    background-size: cover;
+  }
+}
+
+/* Nav */
+.nav-container {
+  align-items: center;
+  display: flex;
+}
+
+.nav-container .top-menu {
+  margin-left: auto;
+}
+
+.nav-container .top-menu a {
+  padding: 0 10px;
+}
+.nav-container .top-menu a:last-child {
+  padding-right:40px;
+}
+
+/* Extra Code */
+.glide__slides {
+  /* transition: transform 0ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s; width: 4240.5px; transform: translate3d(-867.375px, 0px, 0px); */
 }
