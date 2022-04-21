@@ -1,0 +1,13 @@
+{
+  "name": "hunterhr",
+  "version": "1.0.0",
+  "description": "Hunter HR site",
+  "scripts": {
+    "live": "live-server"
+  },
+  "author": "oneillci@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
