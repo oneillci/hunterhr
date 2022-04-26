@@ -1,6 +1,7 @@
 :root {
   --main-header-colour: #606060;
   --menu-text-colour: var(--main-header-colour);
+  --border-colour: var(--main-header-colour);
 }
 
 
@@ -9,13 +10,27 @@ html, body {
     font-family: open_sansregular, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 18px;
     line-height: 1.8;
-    padding: 10px;
 }
 
-h2 {
+h1, h2 {
   color: var(--main-header-colour);
 }
 
+/* ######################################################################################################### */
+/* general styles */
+.flex {
+  display:flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+/* ######################################################################################################### */
 /* 
 video 
 https://blog.hubspot.com/website/video-background-css
@@ -40,6 +55,7 @@ https://blog.hubspot.com/website/video-background-css
   }
 }
 
+/* ######################################################################################################### */
 /* Nav */
 header {
   /* background: rgb(150,244,245); */
@@ -49,6 +65,11 @@ header {
 .nav-container {
   align-items: center;
   display: flex;
+  background: white;
+}
+
+.home-logo {
+  margin-left:50px;
 }
 
 .nav-container .top-menu {
@@ -59,6 +80,7 @@ header {
 .nav-container .top-menu a {
   padding: 0 10px;  
   text-decoration: none;
+  text-transform: uppercase;
   color: var(--menu-text-colour);
 }
 .nav-container .top-menu a:last-child {
@@ -68,17 +90,83 @@ header {
   color: inherit;
 }
 
+.tagline {
+  padding: 0 20px;
+}
+
+/* ######################################################################################################### */
 /* sections */
 section {
   padding: 0 50px;
+  
 }
 
+.main {
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+.main h1 {
+  padding: 200px 20px;
+}
+
+.main-subtext {
+  border: 1px solid var(--border-colour);
+  border-radius: 5px;;
+  color: var(--border-colour);
+  background: white;
+}
+
+/* ######################################################################################################### */
+/* moving you forward */
+
+#moving-you-forward {
+  display: flex;
+}
+
+#moving-you-forward aside {
+  flex-direction: row;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+}
+#moving-you-forward aside img {
+  height: 200px;
+}
+
+/* ######################################################################################################### */
+/* meet elaine */
+.headshot {
+  width:300px;
+  height:300px;
+  object-fit:cover;
+  border-radius:50%;
+}
+
+.meet-elaine {
+  background: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.meet-elaine-text {
+  margin-left:10px;
+}
+
+/* ######################################################################################################### */
+/* testimonials */
 #hunterhr-testimonials cite {
   display: block;
   /* width: 400px;
   max-width: 400px; */
 }
 
+
+/* ######################################################################################################### */
 /* Extra Code */
 .glide__slides {
   /* transition: transform 0ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s; width: 4240.5px; transform: translate3d(-867.375px, 0px, 0px); */
