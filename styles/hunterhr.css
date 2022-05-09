@@ -1,5 +1,7 @@
 :root {
-  --main-header-colour: #606060;
+  --main-header-colour: #4c4845;
+  --hunter-hr-teal: #1bb9c5;
+  --hunter-hr-green: #48ca7d;
   --menu-text-colour: var(--main-header-colour);
   --border-colour: var(--main-header-colour);
 }
@@ -7,13 +9,30 @@
 
 html, body {
   height: 100%;
-    font-family: open_sansregular, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.8;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--main-header-colour);
 }
 
 h1, h2 {
   color: var(--main-header-colour);
+  font-weight: 300;
+}
+h1 {
+  font-weight: 600;
+  letter-spacing:3px;
+}
+
+a {
+  padding: 0 15px;  
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--menu-text-colour);
+  letter-spacing: 1px;
+}
+a:visited {
+  color: inherit;
 }
 
 /* ######################################################################################################### */
@@ -28,6 +47,29 @@ h1, h2 {
 
 .flex-col {
   flex-direction: column;
+}
+
+.section-header {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom:20px;
+  text-align:center;
+}
+.section-header::before {
+  margin-right: 20px;
+  content: "";
+  border-top: 2px solid var(--main-header-colour);
+  width: 60px;
+  padding-bottom: 4px;
+  display: inline-block;
+}
+.section-header::after {
+  margin-left: 20px;
+  content: "";
+  border-top: 2px solid var(--main-header-colour);
+  width: 60px;
+  padding-bottom: 4px;
+  display: inline-block;
 }
 
 /* ######################################################################################################### */
@@ -78,10 +120,11 @@ header {
 }
 
 .nav-container .top-menu a {
-  padding: 0 10px;  
+  padding: 0 15px;  
   text-decoration: none;
   text-transform: uppercase;
   color: var(--menu-text-colour);
+  letter-spacing: 1px;
 }
 .nav-container .top-menu a:last-child {
   padding-right:40px;
@@ -98,24 +141,39 @@ header {
 /* sections */
 section {
   padding: 0 50px;
-  
+  position: relative;  
 }
 
-.main {
-  text-transform: uppercase;
+.separator {
+  bottom: -4px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+
+  width: 100%;
+}
+
+.main {  
   color: white;
   text-align: center;
 }
 
 .main h1 {
-  padding: 200px 20px;
+  text-transform: uppercase;
+  /* padding: 200px 20px; */
+  margin-top: 10rem;
+}
+
+.main-tagline {
+  padding-bottom: 200px;
 }
 
 .main-subtext {
-  border: 1px solid var(--border-colour);
-  border-radius: 5px;;
+  /* border: 1px solid var(--border-colour); */
+  /* border-radius: 5px; */
   color: var(--border-colour);
   background: white;
+  padding:2rem 10rem;
 }
 
 /* ######################################################################################################### */
@@ -123,16 +181,20 @@ section {
 
 #moving-you-forward {
   display: flex;
+  background:grey;
 }
 
 #moving-you-forward aside {
   flex-direction: row;
-  border: 1px solid black;
-  border-radius: 5px;
+  /* border: 1px solid black; */
+  /* border-radius: 5px; */
   background-color: white;
-  margin: 5px;
-  padding: 10px;
+  /* margin: 5px; */
+  padding: 40px;
   text-align: center;
+}
+#moving-you-forward aside h2 {
+  font-weight: 700;
 }
 #moving-you-forward aside img {
   height: 200px;
@@ -140,6 +202,16 @@ section {
 
 /* ######################################################################################################### */
 /* meet elaine */
+.headshot-wrapper {
+  border: 2px solid var(--hunter-hr-teal);
+  background-color: white;
+  padding: 2px;
+  width:300px;
+  height:300px;
+  object-fit:cover;
+  border-radius:50%;
+}
+
 .headshot {
   width:300px;
   height:300px;
@@ -148,13 +220,14 @@ section {
 }
 
 .meet-elaine {
-  background: white;
+  /* background: var(--hunter-hr-green); */
+  background: #48ca7d91;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
 }
 
 .meet-elaine-text {
-  margin-left:10px;
+  margin-left:30px;
 }
 
 /* ######################################################################################################### */
@@ -165,6 +238,38 @@ section {
   max-width: 400px; */
 }
 
+
+/* ######################################################################################################### */
+/* contact */
+#contact {
+  background: white;
+  margin: 50px;
+  padding: 20px;
+}
+
+#contact a {
+  padding: 0;
+  letter-spacing: 0px;
+  text-transform: none;
+  text-decoration: underline;
+}
+
+#contact input[type=text], #contact input[type=email], #contact textarea {
+  width: 300px;
+}
+
+#contact input[type=submit] {
+  width: 100px;
+  margin-top:20px;
+}
+
+.howcontact {
+  padding: 20px 0;
+}
+
+.locatedin {
+  padding-top:30px;
+}
 
 /* ######################################################################################################### */
 /* Extra Code */
