@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Hunter HR site",
   "scripts": {
-    "live": "live-server"
+    "live": "live-server",
+    "build": ""
   },
   "author": "oneillci@gmail.com",
   "license": "MIT",
