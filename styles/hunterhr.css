@@ -50,6 +50,10 @@ a:visited {
   flex-direction: column;
 }
 
+.flex-centre {
+  align-items:center;
+}
+
 .section-header {
   text-transform: uppercase;
   font-size: 16px;
@@ -190,6 +194,10 @@ section {
   background-color: var(--bg-alt);
 }
 
+.text-centre {
+  text-align: center;
+}
+
 .hr-alone {
   background: var(--bg-alt);
 }
@@ -213,14 +221,15 @@ section {
 }
 
 /* ######################################################################################################### */
-/* moving you forward */
+/* how we help, moving you forward */
 
-#moving-you-forward {
+.bg-white { background: white;}
+
+.icon-section {
   display: flex;
-  background:grey;
 }
 
-#moving-you-forward aside {
+.icon-section aside {
   flex-direction: row;
   /* border: 1px solid black; */
   /* border-radius: 5px; */
@@ -229,10 +238,10 @@ section {
   padding: 40px;
   text-align: center;
 }
-#moving-you-forward aside h2 {
+.icon-section aside h2 {
   font-weight: 700;
 }
-#moving-you-forward aside img {
+.icon-section aside img {
   height: 200px;
 }
 
@@ -260,7 +269,7 @@ section {
   /* background: #48ca7d91; */
   background: var(--bg-alt);
   display: flex;
-  padding: 5rem 5rem;
+  /* padding: 5rem 5rem; */
   /* flex-direction: row; */
 }
 
@@ -330,11 +339,11 @@ section {
 .slider__frame {
   border-radius: .1666666667em;
   text-align: center;
-  height: 150px;
-  line-height: 150px;
+  height: 300px;
+  line-height: 2.8;
   -webkit-box-shadow: inset 0 0 0 2px hsla(0,0%,100%,.5);
   box-shadow: inset 0 0 0 2px hsla(0,0%,100%,.5);
-  color: #fff;
+  color: var(--main-header-colour);
   background: transparent;
   font-size: 1em;
   font-weight: 900;
